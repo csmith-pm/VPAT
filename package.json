@@ -1,0 +1,33 @@
+{
+  "name": "vpat-automation",
+  "version": "1.0.0",
+  "description": "Automate VPAT/ACR accessibility scanning, scoring, and document generation",
+  "type": "module",
+  "scripts": {
+    "scan": "tsx src/cli.ts",
+    "generate-axe-mapping": "tsx scripts/generate-axe-mapping.ts",
+    "create-template": "tsx scripts/create-template.ts",
+    "dump-template": "tsx scripts/dump-template-questions.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "axe-core": "^4.10.0",
+    "chalk": "^5.4.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.0.0",
+    "docx": "^9.5.3",
+    "fast-xml-parser": "^5.1.0",
+    "jszip": "^3.10.1",
+    "ora": "^8.1.0",
+    "playwright": "^1.50.0",
+    "zod": "^3.24.0"
+  }
+}

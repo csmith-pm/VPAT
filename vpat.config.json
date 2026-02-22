@@ -1,0 +1,17 @@
+{
+  "product": "Transparency",
+  "reportDate": "Q1 2026",
+  "templatePath": "./templates/Transparency-VPAT-Template.docx",
+  "outputPath": "./output/Q1-2026-ClearGov-Transparency-ACR.docx",
+  "productSectionIndex": 0,
+  "urls": [
+    "https://cleargov.com/north-dakota/mchenry/city/heroville",
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/2026/native/revenue?breakdowntype=object&objectid=122117"
+  ],
+  "scanOptions": {
+    "concurrency": 3,
+    "timeout": 60000,
+    "waitForSelector": "body"
+  },
+  "carryForwardPath": null
+}

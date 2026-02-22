@@ -1,0 +1,1319 @@
+[
+  {
+    "ruleId": "area-alt",
+    "description": "Ensure <area> elements of image maps have alternative text",
+    "wcagScs": [
+      "2.4.4",
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag244",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.2.4.4",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.2"
+    ]
+  },
+  {
+    "ruleId": "aria-allowed-attr",
+    "description": "Ensure an element's role supports its ARIA attributes",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-braille-equivalent",
+    "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2"
+    ]
+  },
+  {
+    "ruleId": "aria-command-name",
+    "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.9.1"
+    ]
+  },
+  {
+    "ruleId": "aria-conditional-attr",
+    "description": "Ensure ARIA attributes are used as described in the specification of the element's role",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-deprecated-role",
+    "description": "Ensure elements do not use deprecated roles",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-hidden-body",
+    "description": "Ensure aria-hidden=\"true\" is not present on the document body.",
+    "wcagScs": [
+      "1.3.1",
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag131",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-10.8.1"
+    ]
+  },
+  {
+    "ruleId": "aria-hidden-focus",
+    "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-10.8.1"
+    ]
+  },
+  {
+    "ruleId": "aria-input-field-name",
+    "description": "Ensure every ARIA input field has an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-meter-name",
+    "description": "Ensure every ARIA meter node has an accessible name",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag111",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-progressbar-name",
+    "description": "Ensure every ARIA progressbar node has an accessible name",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag111",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-prohibited-attr",
+    "description": "Ensure ARIA attributes are not prohibited for an element's role",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-required-attr",
+    "description": "Ensure elements with ARIA roles have all required ARIA attributes",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-required-children",
+    "description": "Ensure elements with an ARIA role that require child roles contain them",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.1"
+    ]
+  },
+  {
+    "ruleId": "aria-required-parent",
+    "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.1"
+    ]
+  },
+  {
+    "ruleId": "aria-roledescription",
+    "description": "Ensure aria-roledescription is only used on elements with an implicit or explicit role",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "deprecated"
+    ]
+  },
+  {
+    "ruleId": "aria-roles",
+    "description": "Ensure all elements with a role attribute use a valid value",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-toggle-field-name",
+    "description": "Ensure every ARIA toggle field has an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-tooltip-name",
+    "description": "Ensure every ARIA tooltip node has an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2"
+    ]
+  },
+  {
+    "ruleId": "aria-valid-attr",
+    "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "aria-valid-attr-value",
+    "description": "Ensure all ARIA attributes have valid values",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.aria",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "audio-caption",
+    "description": "Ensure <audio> elements have captions",
+    "wcagScs": [
+      "1.2.1"
+    ],
+    "tags": [
+      "cat.time-and-media",
+      "wcag2a",
+      "wcag121",
+      "EN-301-549",
+      "EN-9.1.2.1",
+      "section508",
+      "section508.22.a",
+      "deprecated"
+    ]
+  },
+  {
+    "ruleId": "autocomplete-valid",
+    "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+    "wcagScs": [
+      "1.3.5"
+    ],
+    "tags": [
+      "cat.forms",
+      "wcag21aa",
+      "wcag135",
+      "EN-301-549",
+      "EN-9.1.3.5",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.13.1"
+    ]
+  },
+  {
+    "ruleId": "avoid-inline-spacing",
+    "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+    "wcagScs": [
+      "1.4.12"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag21aa",
+      "wcag1412",
+      "EN-301-549",
+      "EN-9.1.4.12",
+      "ACT"
+    ]
+  },
+  {
+    "ruleId": "blink",
+    "description": "Ensure <blink> elements are not used",
+    "wcagScs": [
+      "2.2.2"
+    ],
+    "tags": [
+      "cat.time-and-media",
+      "wcag2a",
+      "wcag222",
+      "section508",
+      "section508.22.j",
+      "TTv5",
+      "TT2.b",
+      "EN-301-549",
+      "EN-9.2.2.2",
+      "RGAAv4",
+      "RGAA-13.8.1"
+    ]
+  },
+  {
+    "ruleId": "button-name",
+    "description": "Ensure buttons have discernible text",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.9.1"
+    ]
+  },
+  {
+    "ruleId": "bypass",
+    "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+    "wcagScs": [
+      "2.4.1"
+    ],
+    "tags": [
+      "cat.keyboard",
+      "wcag2a",
+      "wcag241",
+      "section508",
+      "section508.22.o",
+      "TTv5",
+      "TT9.a",
+      "EN-301-549",
+      "EN-9.2.4.1",
+      "RGAAv4",
+      "RGAA-12.7.1"
+    ]
+  },
+  {
+    "ruleId": "color-contrast",
+    "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    "wcagScs": [
+      "1.4.3"
+    ],
+    "tags": [
+      "cat.color",
+      "wcag2aa",
+      "wcag143",
+      "TTv5",
+      "TT13.c",
+      "EN-301-549",
+      "EN-9.1.4.3",
+      "ACT",
+      "RGAAv4",
+      "RGAA-3.2.1"
+    ]
+  },
+  {
+    "ruleId": "color-contrast-enhanced",
+    "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds",
+    "wcagScs": [
+      "1.4.6"
+    ],
+    "tags": [
+      "cat.color",
+      "wcag2aaa",
+      "wcag146",
+      "ACT"
+    ]
+  },
+  {
+    "ruleId": "css-orientation-lock",
+    "description": "Ensure content is not locked to any specific display orientation, and the content is operable in all display orientations",
+    "wcagScs": [
+      "1.3.4"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag134",
+      "wcag21aa",
+      "EN-301-549",
+      "EN-9.1.3.4",
+      "RGAAv4",
+      "RGAA-13.9.1",
+      "experimental"
+    ]
+  },
+  {
+    "ruleId": "definition-list",
+    "description": "Ensure <dl> elements are structured correctly",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.3"
+    ]
+  },
+  {
+    "ruleId": "dlitem",
+    "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.3"
+    ]
+  },
+  {
+    "ruleId": "document-title",
+    "description": "Ensure each HTML document contains a non-empty <title> element",
+    "wcagScs": [
+      "2.4.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag242",
+      "TTv5",
+      "TT12.a",
+      "EN-301-549",
+      "EN-9.2.4.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-8.5.1"
+    ]
+  },
+  {
+    "ruleId": "duplicate-id",
+    "description": "Ensure every id attribute value is unique",
+    "wcagScs": [
+      "4.1.1"
+    ],
+    "tags": [
+      "cat.parsing",
+      "wcag2a-obsolete",
+      "wcag411",
+      "deprecated"
+    ]
+  },
+  {
+    "ruleId": "duplicate-id-active",
+    "description": "Ensure every id attribute value of active elements is unique",
+    "wcagScs": [
+      "4.1.1"
+    ],
+    "tags": [
+      "cat.parsing",
+      "wcag2a-obsolete",
+      "wcag411",
+      "deprecated"
+    ]
+  },
+  {
+    "ruleId": "duplicate-id-aria",
+    "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.parsing",
+      "wcag2a",
+      "wcag412",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-8.2.1"
+    ]
+  },
+  {
+    "ruleId": "form-field-multiple-labels",
+    "description": "Ensure form field does not have multiple label elements",
+    "wcagScs": [
+      "3.3.2"
+    ],
+    "tags": [
+      "cat.forms",
+      "wcag2a",
+      "wcag332",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.3.3.2",
+      "RGAAv4",
+      "RGAA-11.2.1"
+    ]
+  },
+  {
+    "ruleId": "frame-focusable-content",
+    "description": "Ensure <frame> and <iframe> elements with focusable content do not have tabindex=-1",
+    "wcagScs": [
+      "2.1.1"
+    ],
+    "tags": [
+      "cat.keyboard",
+      "wcag2a",
+      "wcag211",
+      "TTv5",
+      "TT4.a",
+      "EN-301-549",
+      "EN-9.2.1.1",
+      "RGAAv4",
+      "RGAA-7.3.2"
+    ]
+  },
+  {
+    "ruleId": "frame-title",
+    "description": "Ensure <iframe> and <frame> elements have an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.i",
+      "TTv5",
+      "TT12.d",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-2.1.1"
+    ]
+  },
+  {
+    "ruleId": "frame-title-unique",
+    "description": "Ensure <iframe> and <frame> elements contain a unique title attribute",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT12.d",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-2.2.1"
+    ]
+  },
+  {
+    "ruleId": "html-has-lang",
+    "description": "Ensure every HTML document has a lang attribute",
+    "wcagScs": [
+      "3.1.1"
+    ],
+    "tags": [
+      "cat.language",
+      "wcag2a",
+      "wcag311",
+      "TTv5",
+      "TT11.a",
+      "EN-301-549",
+      "EN-9.3.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-8.3.1"
+    ]
+  },
+  {
+    "ruleId": "html-lang-valid",
+    "description": "Ensure the lang attribute of the <html> element has a valid value",
+    "wcagScs": [
+      "3.1.1"
+    ],
+    "tags": [
+      "cat.language",
+      "wcag2a",
+      "wcag311",
+      "TTv5",
+      "TT11.a",
+      "EN-301-549",
+      "EN-9.3.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-8.4.1"
+    ]
+  },
+  {
+    "ruleId": "html-xml-lang-mismatch",
+    "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+    "wcagScs": [
+      "3.1.1"
+    ],
+    "tags": [
+      "cat.language",
+      "wcag2a",
+      "wcag311",
+      "EN-301-549",
+      "EN-9.3.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-8.3.1"
+    ]
+  },
+  {
+    "ruleId": "identical-links-same-purpose",
+    "description": "Ensure that links with the same accessible name serve a similar purpose",
+    "wcagScs": [
+      "2.4.9"
+    ],
+    "tags": [
+      "cat.semantics",
+      "wcag2aaa",
+      "wcag249"
+    ]
+  },
+  {
+    "ruleId": "image-alt",
+    "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT7.a",
+      "TT7.b",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.1"
+    ]
+  },
+  {
+    "ruleId": "input-button-name",
+    "description": "Ensure input buttons have discernible text",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.9.1"
+    ]
+  },
+  {
+    "ruleId": "input-image-alt",
+    "description": "Ensure <input type=\"image\"> elements have alternative text",
+    "wcagScs": [
+      "1.1.1",
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT7.a",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.3"
+    ]
+  },
+  {
+    "ruleId": "label",
+    "description": "Ensure every form element has a label",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.forms",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.n",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ]
+  },
+  {
+    "ruleId": "label-content-name-mismatch",
+    "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+    "wcagScs": [
+      "2.5.3"
+    ],
+    "tags": [
+      "cat.semantics",
+      "wcag21a",
+      "wcag253",
+      "EN-301-549",
+      "EN-9.2.5.3",
+      "RGAAv4",
+      "RGAA-6.1.5",
+      "experimental"
+    ]
+  },
+  {
+    "ruleId": "link-in-text-block",
+    "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+    "wcagScs": [
+      "1.4.1"
+    ],
+    "tags": [
+      "cat.color",
+      "wcag2a",
+      "wcag141",
+      "TTv5",
+      "TT13.a",
+      "EN-301-549",
+      "EN-9.1.4.1",
+      "RGAAv4",
+      "RGAA-10.6.1"
+    ]
+  },
+  {
+    "ruleId": "link-name",
+    "description": "Ensure links have discernible text",
+    "wcagScs": [
+      "2.4.4",
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag244",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.2.4.4",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-6.2.1"
+    ]
+  },
+  {
+    "ruleId": "list",
+    "description": "Ensure that lists are structured correctly",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.1"
+    ]
+  },
+  {
+    "ruleId": "listitem",
+    "description": "Ensure <li> elements are used semantically",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.structure",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.3.1"
+    ]
+  },
+  {
+    "ruleId": "marquee",
+    "description": "Ensure <marquee> elements are not used",
+    "wcagScs": [
+      "2.2.2"
+    ],
+    "tags": [
+      "cat.parsing",
+      "wcag2a",
+      "wcag222",
+      "TTv5",
+      "TT2.b",
+      "EN-301-549",
+      "EN-9.2.2.2",
+      "RGAAv4",
+      "RGAA-13.8.1"
+    ]
+  },
+  {
+    "ruleId": "meta-refresh",
+    "description": "Ensure <meta http-equiv=\"refresh\"> is not used for delayed refresh",
+    "wcagScs": [
+      "2.2.1"
+    ],
+    "tags": [
+      "cat.time-and-media",
+      "wcag2a",
+      "wcag221",
+      "TTv5",
+      "TT8.a",
+      "EN-301-549",
+      "EN-9.2.2.1",
+      "RGAAv4",
+      "RGAA-13.1.2"
+    ]
+  },
+  {
+    "ruleId": "meta-refresh-no-exceptions",
+    "description": "Ensure <meta http-equiv=\"refresh\"> is not used for delayed refresh",
+    "wcagScs": [
+      "2.2.4",
+      "3.2.5"
+    ],
+    "tags": [
+      "cat.time-and-media",
+      "wcag2aaa",
+      "wcag224",
+      "wcag325"
+    ]
+  },
+  {
+    "ruleId": "meta-viewport",
+    "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+    "wcagScs": [
+      "1.4.4"
+    ],
+    "tags": [
+      "cat.sensory-and-visual-cues",
+      "wcag2aa",
+      "wcag144",
+      "EN-301-549",
+      "EN-9.1.4.4",
+      "ACT",
+      "RGAAv4",
+      "RGAA-10.4.2"
+    ]
+  },
+  {
+    "ruleId": "nested-interactive",
+    "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.keyboard",
+      "wcag2a",
+      "wcag412",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "RGAAv4",
+      "RGAA-7.1.1"
+    ]
+  },
+  {
+    "ruleId": "no-autoplay-audio",
+    "description": "Ensure <video> or <audio> elements do not autoplay audio for more than 3 seconds without a control mechanism to stop or mute the audio",
+    "wcagScs": [
+      "1.4.2"
+    ],
+    "tags": [
+      "cat.time-and-media",
+      "wcag2a",
+      "wcag142",
+      "TTv5",
+      "TT2.a",
+      "EN-301-549",
+      "EN-9.1.4.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-4.10.1"
+    ]
+  },
+  {
+    "ruleId": "object-alt",
+    "description": "Ensure <object> elements have alternative text",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "RGAAv4",
+      "RGAA-1.1.6"
+    ]
+  },
+  {
+    "ruleId": "p-as-heading",
+    "description": "Ensure bold, italic text and font-size is not used to style <p> elements as a heading",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.semantics",
+      "wcag2a",
+      "wcag131",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-9.1.3",
+      "experimental"
+    ]
+  },
+  {
+    "ruleId": "role-img-alt",
+    "description": "Ensure [role=\"img\"] elements have alternative text",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT7.a",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.1"
+    ]
+  },
+  {
+    "ruleId": "scrollable-region-focusable",
+    "description": "Ensure elements that have scrollable content are accessible by keyboard",
+    "wcagScs": [
+      "2.1.1",
+      "2.1.3"
+    ],
+    "tags": [
+      "cat.keyboard",
+      "wcag2a",
+      "wcag211",
+      "wcag213",
+      "TTv5",
+      "TT4.a",
+      "EN-301-549",
+      "EN-9.2.1.1",
+      "EN-9.2.1.3",
+      "RGAAv4",
+      "RGAA-7.3.2"
+    ]
+  },
+  {
+    "ruleId": "select-name",
+    "description": "Ensure select element has an accessible name",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.forms",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.n",
+      "TTv5",
+      "TT5.c",
+      "EN-301-549",
+      "EN-9.4.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-11.1.1"
+    ]
+  },
+  {
+    "ruleId": "server-side-image-map",
+    "description": "Ensure that server-side image maps are not used",
+    "wcagScs": [
+      "2.1.1"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag211",
+      "section508",
+      "section508.22.f",
+      "TTv5",
+      "TT4.a",
+      "EN-301-549",
+      "EN-9.2.1.1",
+      "RGAAv4",
+      "RGAA-1.1.4"
+    ]
+  },
+  {
+    "ruleId": "summary-name",
+    "description": "Ensure summary elements have discernible text",
+    "wcagScs": [
+      "4.1.2"
+    ],
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT6.a",
+      "EN-301-549",
+      "EN-9.4.1.2"
+    ]
+  },
+  {
+    "ruleId": "svg-img-alt",
+    "description": "Ensure <svg> elements with an img, graphics-document or graphics-symbol role have accessible text",
+    "wcagScs": [
+      "1.1.1"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT7.a",
+      "EN-301-549",
+      "EN-9.1.1.1",
+      "ACT",
+      "RGAAv4",
+      "RGAA-1.1.5"
+    ]
+  },
+  {
+    "ruleId": "table-fake-caption",
+    "description": "Ensure that tables with a caption use the <caption> element.",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.tables",
+      "experimental",
+      "wcag2a",
+      "wcag131",
+      "section508",
+      "section508.22.g",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-5.4.1"
+    ]
+  },
+  {
+    "ruleId": "target-size",
+    "description": "Ensure touch targets have sufficient size and space",
+    "wcagScs": [
+      "2.5.8"
+    ],
+    "tags": [
+      "cat.sensory-and-visual-cues",
+      "wcag22aa",
+      "wcag258"
+    ]
+  },
+  {
+    "ruleId": "td-has-header",
+    "description": "Ensure that each non-empty data cell in a <table> larger than 3 by 3  has one or more table headers",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.tables",
+      "experimental",
+      "wcag2a",
+      "wcag131",
+      "section508",
+      "section508.22.g",
+      "TTv5",
+      "TT14.b",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-5.7.4"
+    ]
+  },
+  {
+    "ruleId": "td-headers-attr",
+    "description": "Ensure that each cell in a table that uses the headers attribute refers only to other <th> elements in that table",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.tables",
+      "wcag2a",
+      "wcag131",
+      "section508",
+      "section508.22.g",
+      "TTv5",
+      "TT14.b",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-5.7.4"
+    ]
+  },
+  {
+    "ruleId": "th-has-data-cells",
+    "description": "Ensure that <th> elements and elements with role=columnheader/rowheader have data cells they describe",
+    "wcagScs": [
+      "1.3.1"
+    ],
+    "tags": [
+      "cat.tables",
+      "wcag2a",
+      "wcag131",
+      "section508",
+      "section508.22.g",
+      "TTv5",
+      "TT14.b",
+      "EN-301-549",
+      "EN-9.1.3.1",
+      "RGAAv4",
+      "RGAA-5.7.1"
+    ]
+  },
+  {
+    "ruleId": "valid-lang",
+    "description": "Ensure lang attributes have valid values",
+    "wcagScs": [
+      "3.1.2"
+    ],
+    "tags": [
+      "cat.language",
+      "wcag2aa",
+      "wcag312",
+      "TTv5",
+      "TT11.b",
+      "EN-301-549",
+      "EN-9.3.1.2",
+      "ACT",
+      "RGAAv4",
+      "RGAA-8.8.1"
+    ]
+  },
+  {
+    "ruleId": "video-caption",
+    "description": "Ensure <video> elements have captions",
+    "wcagScs": [
+      "1.2.2"
+    ],
+    "tags": [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag122",
+      "section508",
+      "section508.22.a",
+      "TTv5",
+      "TT17.a",
+      "EN-301-549",
+      "EN-9.1.2.2",
+      "RGAAv4",
+      "RGAA-4.3.1"
+    ]
+  }
+]
