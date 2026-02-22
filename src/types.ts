@@ -16,6 +16,29 @@ export interface ScanResult {
   incomplete: AxeRuleResult[];
 }
 
+/** Per-node failure info from axe-core */
+export interface AxeNodeDetail {
+  target: string[];
+  html: string;
+  failureSummary: string;
+}
+
+/** Extended violation detail with per-node info */
+export interface AxeViolationDetail {
+  ruleId: string;
+  description: string;
+  impact: 'minor' | 'moderate' | 'serious' | 'critical' | null;
+  wcagTags: string[];
+  help: string;
+  helpUrl: string;
+  nodeDetails: AxeNodeDetail[];
+}
+
+/** Scan result with detailed violation data for remediation reports */
+export interface DetailedScanResult extends ScanResult {
+  violationDetails: AxeViolationDetail[];
+}
+
 /** Aggregated verdict for a single WCAG Success Criterion across all URLs */
 export interface WcagScResult {
   /** e.g. "1.1.1" */

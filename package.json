@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "scan": "tsx src/cli.ts",
+    "scan:all": "tsx src/cli.ts --all",
     "generate-axe-mapping": "tsx scripts/generate-axe-mapping.ts",
     "create-template": "tsx scripts/create-template.ts",
     "dump-template": "tsx scripts/dump-template-questions.ts",

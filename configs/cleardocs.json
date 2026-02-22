@@ -1,0 +1,17 @@
+{
+  "product": "ClearDocs",
+  "reportDate": "Q1 2026",
+  "templatePath": "./templates/ClearDocs-VPAT-Template.docx",
+  "outputPath": "./output/Q1-2026-ClearGov-ClearDocs-ACR.docx",
+  "productSectionIndex": 0,
+  "urls": [
+    "https://example.com/cleardocs/placeholder-1",
+    "https://example.com/cleardocs/placeholder-2"
+  ],
+  "scanOptions": {
+    "concurrency": 3,
+    "timeout": 60000,
+    "waitForSelector": "body"
+  },
+  "carryForwardPath": null
+}
