@@ -6,7 +6,20 @@
   "productSectionIndex": 0,
   "urls": [
     "https://cleargov.com/north-dakota/mchenry/city/heroville",
-    "https://cleargov.com/north-dakota/mchenry/city/heroville/2026/native/revenue?breakdowntype=object&objectid=122117"
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/2026/native/revenue?breakdowntype=object&objectid=122117",
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/2026/native/expenditures?breakdowntype=department&objectid=122119",
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/demographics",
+    "https://cleargov.com/app/tr/492612/capital-project/1949",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/overview",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/timeline",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/financials",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/photos",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/documents",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/map",
+    "https://cleargov.com/app/tr/492612/capital-project/1949/project/7237/announcements",
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/2026/native/debt?breakdowntype=department",
+    "https://cleargov.com/north-dakota/mchenry/city/heroville/dashboards",
+    "https://cleargov.com/ohio/ross/city/chillicothe/checkbook"
   ],
   "scanOptions": {
     "concurrency": 3,
