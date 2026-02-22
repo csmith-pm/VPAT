@@ -1,5 +1,5 @@
 /**
- * Generate a clean single-product VPAT template for Transparency.
+ * Generate a clean single-product VPAT template.
  *
  * Reads question data from mappings/wcag-to-questions.json and builds a
  * properly formatted .docx with:
@@ -7,7 +7,9 @@
  *   2. Standards/Guidelines table
  *   3. Four WCAG category tables (Perceivable, Operable, Understandable, Robust)
  *
- * Usage: npx tsx scripts/create-template.ts
+ * Usage:
+ *   npx tsx scripts/create-template.ts
+ *   npx tsx scripts/create-template.ts --product "ClearGov ClearDocs" --description "..."
  */
 import { readFileSync } from 'fs';
 import { writeFileSync, mkdirSync } from 'fs';
@@ -33,8 +35,34 @@ import type { WcagToQuestionEntry } from '../src/types.js';
 // Data
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// CLI args
+// ---------------------------------------------------------------------------
+
+function parseArgs(): { product: string; description: string } {
+  const args = process.argv.slice(2);
+  let product = 'ClearGov Transparency';
+  let description =
+    'ClearGov Transparency is a public-facing financial data visualization platform that helps municipalities present budgets, revenues, and expenditures to residents in an accessible, interactive format.';
+
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === '--product' && args[i + 1]) {
+      product = args[++i];
+    } else if (args[i] === '--description' && args[i + 1]) {
+      description = args[++i];
+    }
+  }
+
+  return { product, description };
+}
+
+const { product: PRODUCT_NAME, description: PRODUCT_DESCRIPTION } = parseArgs();
+
+// Derive short name for filename: last word of product name (e.g. "ClearGov ClearDocs" → "ClearDocs")
+const SHORT_NAME = PRODUCT_NAME.split(/\s+/).pop()!;
+
 const MAPPING_PATH = resolve(import.meta.dirname, '../mappings/wcag-to-questions.json');
-const OUTPUT_PATH = resolve(import.meta.dirname, '../templates/Transparency-VPAT-Template.docx');
+const OUTPUT_PATH = resolve(import.meta.dirname, `../templates/${SHORT_NAME}-VPAT-Template.docx`);
 
 const mapping: WcagToQuestionEntry[] = JSON.parse(readFileSync(MAPPING_PATH, 'utf-8'));
 
@@ -253,7 +281,7 @@ function buildDocument(): Document {
   // Header metadata
   children.push(
     new Paragraph({
-      children: [new TextRun({ text: 'ClearGov Transparency', bold: true, size: 32, font: 'Calibri' })],
+      children: [new TextRun({ text: PRODUCT_NAME, bold: true, size: 32, font: 'Calibri' })],
       heading: HeadingLevel.HEADING_1,
     }),
     new Paragraph({
@@ -270,14 +298,14 @@ function buildDocument(): Document {
     new Paragraph({
       children: [
         new TextRun({ text: 'Product Name: ', bold: true, size: 20, font: 'Calibri' }),
-        new TextRun({ text: 'ClearGov Transparency', size: 20, font: 'Calibri' }),
+        new TextRun({ text: PRODUCT_NAME, size: 20, font: 'Calibri' }),
       ],
     }),
     new Paragraph({
       children: [
         new TextRun({ text: 'Product Description: ', bold: true, size: 20, font: 'Calibri' }),
         new TextRun({
-          text: 'ClearGov Transparency is a public-facing financial data visualization platform that helps municipalities present budgets, revenues, and expenditures to residents in an accessible, interactive format.',
+          text: PRODUCT_DESCRIPTION,
           size: 20,
           font: 'Calibri',
         }),
@@ -343,7 +371,7 @@ function buildDocument(): Document {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  console.log('Building Transparency VPAT template...');
+  console.log(`Building ${SHORT_NAME} VPAT template...`);
   console.log(`Reading questions from: ${MAPPING_PATH}`);
 
   // Count questions per category
@@ -364,8 +392,8 @@ async function main() {
   console.log(`\nTemplate written to: ${OUTPUT_PATH}`);
   console.log('Next steps:');
   console.log('  1. Open in Word to verify formatting');
-  console.log('  2. Run: npx tsx scripts/dump-template-questions.ts templates/Transparency-VPAT-Template.docx');
-  console.log('  3. Update vpat.config.json to point to the new template');
+  console.log(`  2. Run: npx tsx scripts/dump-template-questions.ts templates/${SHORT_NAME}-VPAT-Template.docx`);
+  console.log('  3. Update your config to point to the new template');
 }
 
 main().catch(console.error);
