@@ -5,8 +5,22 @@
   "outputPath": "./output/Q1-2026-ClearGov-ClearDocs-ACR.docx",
   "productSectionIndex": 0,
   "urls": [
-    "https://example.com/cleardocs/placeholder-1",
-    "https://example.com/cleardocs/placeholder-2"
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558785/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558742/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558743/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558761/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558768/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558757/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558762/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558773/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558774/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558775/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558754/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558765/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/71726/cip-project-request",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/122197/cip-projects",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558771/d",
+    "https://city-heroville-nd-cleardoc.cleargov.com/15978/558755/d"
   ],
   "scanOptions": {
     "concurrency": 3,
