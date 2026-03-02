@@ -1,0 +1,20 @@
+{
+  "product": "Courbanize",
+  "reportDate": "Q1 2026",
+  "templatePath": "./templates/Courbanize-VPAT-Template.docx",
+  "outputPath": "./output/Q1-2026-ClearGov-Courbanize-ACR.docx",
+  "productSectionIndex": 0,
+  "urls": [
+    "https://example.com/courbanize/page1",
+    "https://example.com/courbanize/page2",
+    "https://example.com/courbanize/page3",
+    "https://example.com/courbanize/page4",
+    "https://example.com/courbanize/page5"
+  ],
+  "scanOptions": {
+    "concurrency": 3,
+    "timeout": 60000,
+    "waitForSelector": "body"
+  },
+  "carryForwardPath": null
+}

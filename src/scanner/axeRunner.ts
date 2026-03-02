@@ -14,7 +14,7 @@ function extractRuleResults(results: any[]): AxeRuleResult[] {
   }));
 }
 
-function extractViolationDetails(violations: any[]): AxeViolationDetail[] {
+export function extractViolationDetails(violations: any[]): AxeViolationDetail[] {
   return violations.map((v) => ({
     ruleId: v.id,
     description: v.description,

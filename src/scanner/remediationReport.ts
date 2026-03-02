@@ -58,11 +58,11 @@ export function buildRemediationIssues(scanResults: DetailedScanResult[]): Remed
   );
 }
 
-function escapeMarkdown(text: string): string {
+export function escapeMarkdown(text: string): string {
   return text.replace(/\|/g, '\\|').replace(/\n/g, ' ');
 }
 
-function escapeHtml(text: string): string {
+export function escapeHtml(text: string): string {
   return text
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -70,7 +70,7 @@ function escapeHtml(text: string): string {
     .replace(/\n/g, ' ');
 }
 
-function wcagScFromTag(tag: string): string | null {
+export function wcagScFromTag(tag: string): string | null {
   const match = tag.match(/^wcag(\d)(\d)(\d+)$/);
   if (match) return `${match[1]}.${match[2]}.${match[3]}`;
   return null;

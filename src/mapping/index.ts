@@ -109,7 +109,7 @@ export function scoreQuestions(
 }
 
 /** Find WCAG results relevant to a question */
-function findRelevantResults(
+export function findRelevantResults(
   scPrefix: string,
   axeRules: string[],
   wcagResults: Map<string, WcagScResult>
@@ -127,7 +127,7 @@ function findRelevantResults(
 }
 
 /** Normalize question text for matching — handles garbled chars like alter*tive */
-function normalizeText(text: string): string {
+export function normalizeText(text: string): string {
   return text
     .replace(/\s+/g, ' ')
     .replace(/[^\w\s]/g, '')
@@ -136,7 +136,7 @@ function normalizeText(text: string): string {
 }
 
 /** Fuzzy match: check if two question texts are similar enough (handles template garbling) */
-function textsMatch(templateText: string, mappingText: string): boolean {
+export function textsMatch(templateText: string, mappingText: string): boolean {
   const a = normalizeText(templateText);
   const b = normalizeText(mappingText);
   if (a === b) return true;

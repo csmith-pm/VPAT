@@ -130,7 +130,7 @@ export async function parseTemplate(templatePath: string): Promise<{
   const products: ParsedProduct[] = [];
 
   // For multi-product templates, use known names; for single-product, derive from headings
-  const defaultProductNames = ['ClearDocs', 'Transparency', 'ClearForms'];
+  const defaultProductNames = ['ClearDocs', 'Transparency', 'ClearForms', 'Courbanize'];
 
   for (let p = 0; p < productCount; p++) {
     const baseTableIdx = p * TABLES_PER_PRODUCT;
