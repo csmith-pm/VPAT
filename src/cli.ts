@@ -25,6 +25,10 @@ interface CliOptions {
 async function runProduct(config: VpatConfig, options: CliOptions): Promise<{ product: string; success: boolean; error?: string }> {
   const productName = config.product;
 
+  // Add date+timestamp to output filename so repeated runs never overwrite
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  config.outputPath = config.outputPath.replace(/\.docx$/i, `-${timestamp}.docx`);
+
   if (options.concurrency) {
     config.scanOptions.concurrency = options.concurrency;
   }
