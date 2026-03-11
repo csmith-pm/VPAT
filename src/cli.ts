@@ -11,6 +11,8 @@ import { aggregateResults } from './scanner/resultAggregator.js';
 import { scoreQuestions, scoringSummary } from './mapping/index.js';
 import { parseTemplate } from './docx/reader.js';
 import { generateDocx } from './docx/writer.js';
+import { reviewManualQuestions, mergeAiResults } from './ai/aiReviewer.js';
+import { generateRemediationPlanDocx } from './remediation/planDocx.js';
 import type { VpatConfig } from './types.js';
 
 interface CliOptions {
@@ -20,6 +22,9 @@ interface CliOptions {
   scanOnly?: boolean;
   verbose?: boolean;
   concurrency?: number;
+  aiReview?: boolean;
+  aiConfidence?: number;
+  aiModel?: string;
 }
 
 async function runProduct(config: VpatConfig, options: CliOptions): Promise<{ product: string; success: boolean; error?: string }> {
@@ -108,8 +113,33 @@ async function runProduct(config: VpatConfig, options: CliOptions): Promise<{ pr
 
   const scoreSpinner = ora('Scoring questions...').start();
   const scores = scoreQuestions(product, wcagResults);
-  const summary = scoringSummary(scores);
   scoreSpinner.succeed('Questions scored');
+
+  // Step 3b: AI Review (when --ai-review is set)
+  if (options.aiReview) {
+    const aiSpinner = ora('AI reviewing manual questions...').start();
+    const aiResults = await reviewManualQuestions(
+      scores,
+      wcagResults,
+      scanResults,
+      undefined, // no evidence capture yet (Phase 2+)
+      {
+        confidenceThreshold: options.aiConfidence ?? 0.7,
+        model: options.aiModel ?? 'claude-sonnet-4-20250514',
+      },
+      (completed, total) => {
+        aiSpinner.text = `AI reviewing manual questions (${completed}/${total} batches)...`;
+      }
+    );
+
+    const threshold = options.aiConfidence ?? 0.7;
+    const { scored, belowThreshold } = mergeAiResults(scores, aiResults, threshold);
+    aiSpinner.succeed(`AI reviewed ${aiResults.length} questions (${scored} scored, ${belowThreshold} need manual review)`);
+    console.log();
+  }
+
+  // Recalculate summary after AI review
+  const summary = scoringSummary(scores);
 
   // Display summary
   const summaryTable = new Table({
@@ -158,8 +188,20 @@ async function runProduct(config: VpatConfig, options: CliOptions): Promise<{ pr
   const outputPath = resolve(config.outputPath);
   await generateDocx(zip, parsedDoc, product, scores, config.reportDate, outputPath);
   docxSpinner.succeed(`Output saved to ${outputPath}`);
+
+  // Generate remediation plan DOCX
+  const planSpinner = ora('Generating remediation plan DOCX...').start();
+  const planPath = resolve(config.outputPath.replace(/\.docx$/i, '-remediation-plan.docx'));
+  await generateRemediationPlanDocx(remediationIssues, config, planPath);
+  planSpinner.succeed(`Remediation plan saved to ${planPath}`);
+
   console.log();
-  console.log(chalk.green('Done! Remember to manually review non-automatable questions (marked with *).'));
+  const remainingManual = scores.filter(s => s.score === null).length;
+  if (remainingManual > 0) {
+    console.log(chalk.green(`Done! ${remainingManual} question(s) still need manual review (marked with *).`));
+  } else {
+    console.log(chalk.green('Done! All questions have been scored.'));
+  }
 
   return { product: productName, success: true };
 }
@@ -187,8 +229,16 @@ program
   .option('--scan-only', 'Save raw scan results as JSON')
   .option('--verbose', 'Detailed progress output')
   .option('--concurrency <n>', 'Parallel pages to scan', parseInt)
+  .option('--ai-review', 'Use Claude AI to score manual review questions')
+  .option('--ai-confidence <n>', 'AI confidence threshold (0-1, default 0.7)', parseFloat)
+  .option('--ai-model <model>', 'Claude model to use (default claude-sonnet-4-20250514)')
   .action(async (options: CliOptions) => {
     try {
+      if (options.aiReview && !process.env.ANTHROPIC_API_KEY) {
+        console.error(chalk.red('Error: ANTHROPIC_API_KEY environment variable is required when using --ai-review'));
+        process.exit(1);
+      }
+
       if (!options.config && !options.all) {
         const available = listAvailableConfigs();
         console.error(chalk.red('Error: Please specify --config <path> or --all'));
